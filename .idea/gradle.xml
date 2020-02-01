@@ -9,6 +9,24 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/cache_api" />
+            <option value="$PROJECT_DIR$/cache_impl" />
+            <option value="$PROJECT_DIR$/core-start-api" />
+            <option value="$PROJECT_DIR$/core-start-impl" />
+            <option value="$PROJECT_DIR$/core_categories_api" />
+            <option value="$PROJECT_DIR$/core_categories_impl" />
+            <option value="$PROJECT_DIR$/core_details_api" />
+            <option value="$PROJECT_DIR$/core_details_impl" />
+            <option value="$PROJECT_DIR$/core_search_api" />
+            <option value="$PROJECT_DIR$/core_search_impl" />
+            <option value="$PROJECT_DIR$/feature-start" />
+            <option value="$PROJECT_DIR$/feature_categories" />
+            <option value="$PROJECT_DIR$/feature_details" />
+            <option value="$PROJECT_DIR$/feature_search" />
+            <option value="$PROJECT_DIR$/network_api" />
+            <option value="$PROJECT_DIR$/network_impl" />
+            <option value="$PROJECT_DIR$/presentation" />
+            <option value="$PROJECT_DIR$/tools" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':feature-start', ':core-start-api', ':core-start-impl', ':feature_search', ':core_search_api', ':core_search_impl', ':feature_categories', ':core_categories_api', ':core_categories_impl', ':feature_details', ':core_details_api', ':core_details_impl', ':tools', ':presentation', ':cache_api', ':cache_impl', ':network_api', ':network_impl'
 rootProject.name='test_wargaming'
