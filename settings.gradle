@@ -1,2 +1,20 @@
-include ':app', ':feature-start', ':core-start-api', ':core-start-impl', ':feature_search', ':core_search_api', ':core_search_impl', ':feature_categories', ':core_categories_api', ':core_categories_impl', ':feature_details', ':core_details_api', ':core_details_impl', ':tools', ':presentation', ':cache_api', ':cache_impl', ':network_api', ':network_impl'
+include ':app',
+        ':feature-start',
+        ':core-start-api',
+        ':core-start-impl',
+        ':feature-search',
+        ':core-search-api',
+        ':core-search-impl',
+        ':feature-categories',
+        ':core-categories-api',
+        ':core-categories-impl',
+        ':feature-details',
+        ':core-details-api',
+        ':core-details-impl',
+        ':tools',
+        ':presentation',
+        ':cache-api',
+        ':cache-impl',
+        ':network-api',
+        ':network-impl'
 rootProject.name='test_wargaming'
