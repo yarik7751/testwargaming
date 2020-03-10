@@ -1,0 +1,19 @@
+ussr
+germany
+usa
+uk
+france
+japan
+sweden
+italy
+poland
+china
+czech
+
+AT-SPG - ПТшка
+SPG - арта
+lightTank
+mediumTank
+heavyTank
+
+https://api.worldoftanks.ru/wot/encyclopedia/vehicles/?application_id=7dc6474ffbc534782bc3f2118ba2dbaf&fields=description%2C+short_name%2C+images%2C+tank_id%2C+name%2C+type&nation=ussr&type=SPG&tier=10

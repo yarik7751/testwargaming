@@ -18,3 +18,4 @@ include ':app',
         ':network-api',
         ':network-impl'
 rootProject.name='test_wargaming'
+include ':core-ui'

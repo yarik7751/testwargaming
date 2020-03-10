@@ -1,4 +1,4 @@
-package com.example.network_impl
+package com.example.network_api
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

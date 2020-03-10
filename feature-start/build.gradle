@@ -1,6 +1,11 @@
 apply plugin: 'com.android.library'
+
 apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android-extensions'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -23,17 +28,41 @@ android {
         }
     }
 
+    androidExtensions {
+        experimental = true
+    }
 }
 
 dependencies {
 
+    implementation project(":core-start-api")
+    implementation project(":core-ui")
     implementation project(":presentation")
     implementation project(":tools")
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.core:core-ktx:1.2.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "androidx.recyclerview:recyclerview:${versions.recycler_view}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.constraint_layout}"
+    implementation "com.github.bumptech.glide:glide:${versions.glide}"
+    kapt "com.github.bumptech.glide:compiler:${versions.glide}"
+
+    //liveData, viewModel, lifecycle
+    implementation "android.arch.lifecycle:extensions:${versions.lifecycle}"
+    kapt "android.arch.lifecycle:compiler:${versions.lifecycle}"
+
+    //coroutines
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.coroutines_core}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines_android}"
+
+    //dagger2
+    api "com.google.dagger:dagger:${versions.dagger}"
+    kapt "com.google.dagger:dagger-compiler:${versions.dagger}"
+
+    implementation "com.hannesdorfmann:adapterdelegates4:${versions.adapterDelegates}"
 }
