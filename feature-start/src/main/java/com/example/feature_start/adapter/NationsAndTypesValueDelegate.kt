@@ -13,7 +13,9 @@ import com.hannesdorfmann.adapterdelegates4.AdapterDelegate
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_nations_and_types_value.*
 
-class NationsAndTypesValueDelegate : AdapterDelegate<MutableList<Any>>() {
+class NationsAndTypesValueDelegate(
+    val typeClick: (typeModel: TypeModel) -> Unit
+): AdapterDelegate<MutableList<Any>>() {
 
     override fun onCreateViewHolder(parent: ViewGroup) =
         NationsAndTypesValueViewHolder(parent.inflate(R.layout.item_nations_and_types_value))
@@ -30,7 +32,7 @@ class NationsAndTypesValueDelegate : AdapterDelegate<MutableList<Any>>() {
         (holder as NationsAndTypesValueViewHolder).bind(items[position] as TypeModel)
     }
 
-    class NationsAndTypesValueViewHolder(override val containerView: View) :
+    inner class NationsAndTypesValueViewHolder(override val containerView: View) :
         BaseViewHolder<TypeModel>(containerView), LayoutContainer {
 
         override fun bind(model: TypeModel) {
@@ -39,6 +41,10 @@ class NationsAndTypesValueDelegate : AdapterDelegate<MutableList<Any>>() {
                 placeholder = 0
             )
             itemNationsAndTypesValuesTitle.text = model.title
+
+            containerView.setOnClickListener {
+                typeClick(model)
+            }
         }
     }
 }

@@ -37,6 +37,7 @@ dependencies {
 
     implementation project(":core-start-api")
     implementation project(":core-ui")
+    implementation project(":common-api")
     implementation project(":presentation")
     implementation project(":tools")
 

@@ -19,3 +19,6 @@ include ':app',
         ':network-impl'
 rootProject.name='test_wargaming'
 include ':core-ui'
+include ':common-api'
+include ':navigation-api'
+include ':navigation-impl'

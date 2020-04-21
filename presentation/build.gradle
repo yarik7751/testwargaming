@@ -46,6 +46,7 @@ dependencies {
     kapt "android.arch.lifecycle:compiler:${versions.lifecycle}"
 
     //dagger2
+    kapt "com.google.dagger:dagger-android-processor:${versions.dagger}"
     api "com.google.dagger:dagger:${versions.dagger}"
     kapt "com.google.dagger:dagger-compiler:${versions.dagger}"
 

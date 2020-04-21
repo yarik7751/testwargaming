@@ -20,8 +20,10 @@ class StartFragment : BaseFragment<StartViewModel>(
     private val adapter: NationsAndTypesAdapter by lazy {
         NationsAndTypesAdapter(
             NationsAndTypesTitleDelegate(),
-            NationsAndTypesValueDelegate(),
-            itemDiff = {_, _ -> true}
+            NationsAndTypesValueDelegate {
+                viewModel.onTypeClick(it)
+            },
+            itemDiff = { _, _ -> true }
         )
     }
 
@@ -47,6 +49,6 @@ class StartFragment : BaseFragment<StartViewModel>(
     }
 
     companion object {
-        fun newInstance() = StartFragment()
+        fun newInstance(): StartFragment = StartFragment()
     }
 }

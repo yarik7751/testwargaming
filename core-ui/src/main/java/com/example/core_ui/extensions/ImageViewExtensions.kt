@@ -6,6 +6,7 @@ import androidx.annotation.DrawableRes
 import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.BaseRequestOptions
@@ -46,6 +47,8 @@ fun ImageView.loadImageFromUrl(
         })
     placeholder?.let { builder.placeholder(it) }
     builder.apply(requestOptions)
+        .diskCacheStrategy(DiskCacheStrategy.NONE)
+        .skipMemoryCache(true)
         .into(this)
 }
 
@@ -81,6 +84,8 @@ fun ImageView.loadImageFromUrl(
             }
         })
         .placeholder(placeholder)
+        .diskCacheStrategy(DiskCacheStrategy.NONE)
+        .skipMemoryCache(true)
         .apply(requestOptions)
         .into(this)
 }
